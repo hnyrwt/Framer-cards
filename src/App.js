@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+// import Loader from "./component/loader/loader";
+import Characters from "./component/characters";
+// const LazyEpisodes =  React.lazy(()=> import ('./component/episodes.jsx'))
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <Suspense fallback={<Loader />}>
+      <LazyEpisodes/>
+    </Suspense> */}
+    <Characters/>
+    </>
   );
 }
 
